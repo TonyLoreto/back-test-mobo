@@ -1,3 +1,71 @@
+# Guía de Instalación y Ejecución del Proyecto Django
+
+## Requisitos Previos
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
+
+- **Python** (Versión recomendada: `>=3.13.0`)
+- **pip** (Gestor de paquetes de Python)
+- **virtualenv** (Opcional, pero recomendado)
+- **Git** (Opcional, pero recomendado)
+
+Para verificar si tienes Python y pip instalados, ejecuta:
+```sh
+python --version
+pip --version
+```
+Si no los tienes, descárgalos desde [Python.org](https://www.python.org/downloads/).
+
+---
+
+## Instalación del Proyecto
+
+### Crear un Entorno Virtual (Opcional, pero recomendado)
+Para evitar conflictos de dependencias, crea un entorno virtual con:
+```sh
+python -m venv venv
+```
+Luego, actívalo:
+- En Windows:
+  ```sh
+  venv\Scripts\activate
+  ```
+- En macOS/Linux:
+  ```sh
+  source venv/bin/activate
+  ```
+
+### Instalar Dependencias
+Ejecuta el siguiente comando para instalar las dependencias necesarias:
+```sh
+pip install -r requirements.txt
+```
+
+---
+
+## Ejecución del Proyecto
+
+### Aplicar Migraciones de la Base de Datos
+Antes de ejecutar el servidor, aplica las migraciones necesarias:
+```sh
+python manage.py migrate
+```
+
+### Crear un Superusuario (Opcional)
+Si necesitas acceso al panel de administración de Django, crea un superusuario:
+```sh
+python manage.py createsuperuser
+```
+Sigue las instrucciones e ingresa un nombre de usuario, correo y contraseña.
+
+### Iniciar el Servidor de Desarrollo
+Para ejecutar la aplicación en modo desarrollo, usa:
+```sh
+python manage.py runserver
+```
+Esto iniciará el servidor en `http://127.0.0.1:8000/`.
+
+---
+
 # **Documentación de la API - Orders API**
 
 ## **Base URL**
